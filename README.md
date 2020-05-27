@@ -9,6 +9,7 @@ O objectivo deste projeto é o desenvolvimento, em linguagem C, de um sistema de
 | __a__ | adiciona um novo produto ao sistema |
 | __q__ | adiciona stock a um produto existente no sistema |
 | __N__ | cria uma nova encomenda |
+| __V__ | lista o cliente de uma encomenda |
 | __A__ | adiciona um produto a uma encomenda |
 | __r__ | remove stock a um produto existente |
 | __R__ | remove um produto de uma encomenda |
@@ -18,6 +19,7 @@ O objectivo deste projeto é o desenvolvimento, em linguagem C, de um sistema de
 | __m__ | retorna o identificador da encomenda em que um dado produto ocorre mais vezes |
 | __l__ | lista todos os produtos existentes no sistema por ordem crescente de preço |
 | __L__ | lista todos os produtos de uma encomenda por ordem alfabética da descrição |
+| __Y__ | lista todas as encomendas por ordem crescente de custo |
 | __x__ | termina o programa |
 
 ## 2. Especificação do problema
