@@ -66,8 +66,12 @@ Os comandos disponíveis são descritos de seguida. Cada comando indica uma dete
   * Erros:
     * `Impossivel adicionar produto <idp> ao stock. Produto inexistente.` no caso de não existir nenhum produto criado com esse identificador
 * __N__ - cria uma nova encomenda
-  * Formato de entrada: `N`
-  * Formato de saída: `Nova encomenda <ide>.` onde `<ide>` é o identificador da encomenda criada.
+  * Formato de entrada: `N cliente`
+  * Formato de saída: `Nova encomenda <ide> <cliente>.` onde `<ide>` é o identificador da encomenda criada e `<cliente>` é o nome do cliente da encomenda.
+* __V__ - lista o cliente de uma encomenda
+  * Formato de entrada: `V ide`
+  * Formato de saída: `<ide> <cliente>.` onde `<ide>` é o identificador da encomenda criada e `<cliente>` é o nome do cliente da encomenda.
+    * `Impossivel listar encomenda <ide>. Encomenda inexistente.` no caso de não existir nenhuma encomenda criada com esse identificador
 * __A__ - adiciona um produto a uma encomenda. Se o produto já existir na encomenda, adiciona a nova quantidade à quantidade existente
   * Formato de entrada: `A ide:idp:qtd`
   * Formato de saída: NADA (excepto erro)
@@ -132,6 +136,17 @@ Os comandos disponíveis são descritos de seguida. Cada comando indica uma dete
         * <descn> <precon> <qtdn na ide>
   * Erros:
     * `Impossivel listar encomenda <ide>. Encomenda inexistente.` no caso de não existir nenhuma encomenda criada com esse identificador
+* __Y__ - lista todas as encomendas existentes no sistema por ordem crescente do seu custo total. Se houver 2 ou mais encomendas com o mesmo custo, deverá imprimir essas por ordem crescente de `id` de encomenda
+  * Formato de entrada: `Y`
+  * Formato de saída: Um bloco no formato abaixo, e em que as encomendas são listadas por ordem crescente de custo
+
+        Encomendas
+        * <ide1> <custo1>
+        * <ide2> <custo2>
+        ...
+        * <iden> <custon>
+  * Erros: Não aplicável
+
 * __x__ - termina o programa
   * Formato de entrada: `x`
   * Formato de saída: NADA
